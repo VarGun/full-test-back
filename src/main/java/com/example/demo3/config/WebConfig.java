@@ -8,6 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfig implements WebMvcConfigurer {
   @Override
   public void addCorsMappings(CorsRegistry registry) {
+    Integer h = 0;
     registry.addMapping("/api/**")
         .allowedOrigins("http://fullstack-frontend-app-bucket-heegun.s3-website.ap-northeast-2.amazonaws.com/","http://fullstack-frontend-app-bucket-22.s3-website.ap-northeast-2.amazonaws.com/","http://fullstack-frontend-app-bucket-hyojoon.s3-website.ap-northeast-2.amazonaws.com/")
         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
